@@ -28,7 +28,7 @@ class BusSearch extends SearchDelegate<String> {
   }
 
 
-  
+
 
   @override
   Widget buildLeading(BuildContext context) {
@@ -43,6 +43,8 @@ class BusSearch extends SearchDelegate<String> {
         onPressed: () {
         });*/
   }
+
+
 
   @override
   Widget buildResults(BuildContext context) {
