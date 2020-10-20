@@ -18,6 +18,8 @@ class BusSearch extends SearchDelegate<String> {
     "Torongo",
     "Ullash"
   ];
+
+  
   final recentSearches = ["Srabon", "Khonika", "Boishakhi", "Choitali"];
   @override
   List<Widget> buildActions(BuildContext context) {
