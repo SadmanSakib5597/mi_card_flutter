@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'DTable.dart';
 
-
-
 class BusSearch extends SearchDelegate<String> {
   final buses = [
     "srabon",
@@ -26,9 +24,6 @@ class BusSearch extends SearchDelegate<String> {
     // Actions for appbar
     return [IconButton(icon: Icon(Icons.search), onPressed: () {})];
   }
-
-
-
 
 
 
