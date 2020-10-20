@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "340179129739",
+    "firebase_url": "https://du-chaka.firebaseio.com",
+    "project_id": "du-chaka",
+    "storage_bucket": "du-chaka.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340179129739:android:19a4c9d58e1de6e00fcb8e",
+        "android_client_info": {
+          "package_name": "co.bashir.DU_CHAKA"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "340179129739-ehl0uvc2tqiilg05e9tmogpc89s6ih6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiitH3uXnD5r-m3UqOoHlJx4bmMV2lA3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "340179129739-ehl0uvc2tqiilg05e9tmogpc89s6ih6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

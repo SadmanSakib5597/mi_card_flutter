@@ -1,20 +1,46 @@
-
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-//import 'Notification.dart';
-import 'Contributor.dart';
 import 'NavDrawer.dart';
-import 'Schedule.dart';
 import 'BusSearch.dart';
-//import 'DTable.dart';
+import 'DatabaseService.dart';
+import '../User.dart';
+import 'dart:async';
 
-//import "package:flutter_tutorials/widgets/nav-drawer.dart";
+class HomePage extends StatefulWidget {
+  static const String id = 'homepage_screen';
 
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+class _MyAppState extends State<HomePage>{
+  final _auth = FirebaseAuth.instance;
+  FirebaseUser loggedInUSer;
+  @override
+  void initState(){
+    super.initState();
+    getCurrentUSer();
+  }
+  void getCurrentUSer() async{
+    try{
+      final user = await _auth.currentUser();
+      if(user!= null){
+        loggedInUSer = user;
+        User.uid = loggedInUSer.uid;
+        print("\nemail: " + loggedInUSer.email + "\nUID: " + loggedInUSer.uid);
 
-/*void main() {
-  runApp(Myapp());
-}*/
-
-class HomePage extends StatelessWidget {
+        //await DatabseService(uid: loggedInUSer.uid).updateUserData(User.userName, User.userRegNo, User.userRegNo);
+        //signOut();
+      }
+      //getCurrentUSer();
+    }catch(e){
+      print(e);
+    }
+  }
+  void signOut() async {
+    print("waiting for sign out");
+    await _auth.signOut();
+    print('sign out');
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -40,8 +66,8 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-}
 
+}
 
 class Testbdy extends StatefulWidget {
   @override
@@ -49,8 +75,8 @@ class Testbdy extends StatefulWidget {
 }
 
 class _TestbdyState extends State<Testbdy> {
-  String myText = "Test Text";
 
+  String myText = "Test Text";
   double width;
   double height;
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'User.dart';
+import '../User.dart';
 //import 'Communicator.dart';
 /*final userName = TextEditingController();
 final Password = TextEditingController();*/
@@ -36,14 +36,16 @@ class FormCard extends StatelessWidget {
             Text("Login",
                 style: TextStyle(
                     fontSize: ScreenUtil.getInstance().setSp(45),
-                    fontFamily: "Poppins-Bold",
+                    fontFamily: "SourseSansPro",
+                    fontWeight: FontWeight.bold,
                     letterSpacing: .6)),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
-            Text("Username",
+            Text("User Email",
                 style: TextStyle(
-                    fontFamily: "Poppins-Medium",
+                    fontFamily: "SourseSansPro",
+                    fontWeight: FontWeight.bold,
                     fontSize: ScreenUtil.getInstance().setSp(26))),
             TextField(
                 //controller:userName,
@@ -54,16 +56,17 @@ class FormCard extends StatelessWidget {
               onChanged: (String str){
                  // print(userName.text);
 
-                User.userName = str;
-                FormCard(username: User.userName,password: '**********',);
+                User.userEmail = str;
+                FormCard(username: User.userEmail,password: '**********',);
               },
             ),
             SizedBox(
               height: ScreenUtil.getInstance().setHeight(30),
             ),
-            Text("PassWord",
+            Text("Password",
                 style: TextStyle(
-                    fontFamily: "Poppins-Medium",
+                    fontFamily: "SourseSansPro",
+                    fontWeight: FontWeight.bold,
                     fontSize: ScreenUtil.getInstance().setSp(26))),
             TextField(
               obscureText: true,
